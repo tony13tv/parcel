@@ -53,7 +53,8 @@ async function getEnvPlugins(targets, useBuiltIns = false) {
     {
       targets,
       modules: false,
-      useBuiltIns: useBuiltIns ? 'entry' : false,
+      useBuiltIns: useBuiltIns ? 'entry' : false, 
+      corejs: useBuiltIns ? 2 : undefined,
       shippedProposals: true
     }
   ).plugins;
